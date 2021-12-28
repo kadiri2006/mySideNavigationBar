@@ -1,0 +1,143 @@
+* {
+  list-style-type: none; /* Remove bullets */
+  padding: 0;
+  margin: 0;
+}
+
+.nav_bar,
+.nav_bar.open {
+  height: 100vh;
+
+  margin-left: 0.1rem;
+  background-color: aliceblue;
+  width: 3.2rem;
+
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  transition: all 0.3s linear;
+}
+
+.nav_bar.open {
+  width: 10rem;
+}
+
+.logo span,
+.logo .bx-sm {
+  opacity: 0;
+}
+
+.nav_bar.open .logo span,
+.nav_bar.open .logo .bx-sm {
+  opacity: 1;
+}
+
+ul {
+  flex-grow: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.nav_bar.open ul li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.logo,
+li,
+.profile i {
+  font-size: 20px;
+  font-weight: 600;
+  padding: 1rem;
+}
+
+.profile {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.bx-search {
+  position: relative;
+}
+input {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  padding-left: 1.5rem;
+}
+
+li:hover {
+  background-color: blueviolet;
+  border-radius: 200px;
+}
+
+#search:hover {
+  background-color: blueviolet;
+}
+
+.logo,
+.nav_bar.open .logo {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row-reverse;
+}
+
+.nav_bar.open .logo {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.profile,
+.nav_bar.open .profile {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row-reverse;
+}
+
+.nav_bar.open .profile {
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+
+.nav_bar li .tooltip {
+  opacity: 0;
+  display: none;
+}
+
+.nav_bar li {
+  position: relative;
+}
+
+.nav_bar li:hover .tooltip {
+  display: inline;
+  opacity: 1;
+  position: absolute;
+  white-space: nowrap;
+  left: 110%;
+  bottom: 20%;
+  background-color: blueviolet;
+  border-radius: 200px;
+  padding: 0.5rem;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.nav_bar.open li .tooltip {
+  display: none;
+}
+
+.nav_bar li span,
+.nav_bar li input,
+.profile_details {
+  display: none;
+}
+.nav_bar.open li span,
+.nav_bar.open li input,
+.nav_bar.open .profile_details {
+  display: block;
+}
